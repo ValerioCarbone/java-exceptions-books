@@ -126,6 +126,17 @@ public class Main {
                 }
             }
         }
+        // Alternativa
+
+        /* try (Scanner fileReader = new Scanner(books)) {
+            while (fileReader.hasNextLine()) {
+                String line = fileReader.nextLine();
+                System.out.println(line);
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found");
+        } */
+
 
         scan.close();
 
