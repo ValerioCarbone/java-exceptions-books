@@ -9,24 +9,26 @@ public class Book {
     // Costruttore
 
     public Book(String title, int numberOfPages, String author, String editor){
-        this.title = title;
-        this.numberOfPages = numberOfPages;
-        this.author = author;
-        this.editor = editor;
 
-        if(title == null){
+        if(title == null || title.isEmpty()){
             throw new IllegalArgumentException("Title is not valid!");
         }
 
-        if(author == null){
+        if(author == null || author.isEmpty()){
             throw new IllegalArgumentException("Author is not valid!");
         }
-        if(editor == null){
+        if(editor == null || editor.isEmpty()){
             throw new IllegalArgumentException("Editor is not valid!");
         }
         if(numberOfPages <= 0){
             throw new IllegalArgumentException("The number of pages is not valid!");
         }
+
+        this.title = title;
+        this.numberOfPages = numberOfPages;
+        this.author = author;
+        this.editor = editor;
+
     }
 
     // Metodi
