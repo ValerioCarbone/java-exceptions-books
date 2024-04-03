@@ -10,16 +10,10 @@ public class Book {
 
     public Book(String title, int numberOfPages, String author, String editor){
 
-        if(title == null || title.isEmpty()){
-            throw new IllegalArgumentException("Title is not valid!");
+        if(title == null || title.isEmpty() || (author == null || author.isEmpty()) || editor == null || editor.isEmpty() ){
+            throw new IllegalArgumentException("Title and/or Author and/or Editor is not valid!");
         }
 
-        if(author == null || author.isEmpty()){
-            throw new IllegalArgumentException("Author is not valid!");
-        }
-        if(editor == null || editor.isEmpty()){
-            throw new IllegalArgumentException("Editor is not valid!");
-        }
         if(numberOfPages <= 0){
             throw new IllegalArgumentException("The number of pages is not valid!");
         }
